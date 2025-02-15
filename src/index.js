@@ -5,10 +5,10 @@ import { sha1 } from 'js-sha1';
 import { DeviceEventEmitter, NativeEventEmitter, NativeModules, Platform } from 'react-native';
 
 let isAppRegistered = false;
-let { WeChat, WechatLib } = NativeModules;
+let { WeChat, RCTWeChat } = NativeModules;
 
 if (WeChat == null) {
-  WeChat = WechatLib;
+  WeChat = RCTWeChat;
 }
 
 // Event emitter to dispatch request and response from WeChat.
